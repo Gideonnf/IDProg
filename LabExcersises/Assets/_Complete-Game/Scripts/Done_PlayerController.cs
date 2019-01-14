@@ -26,9 +26,10 @@ public class Done_PlayerController : MonoBehaviour
 
 	private float nextFire;
 	
-	void Update ()
+	public void Fire ()
 	{
-		if (Input.GetButton("Fire1") && Time.time > nextFire) 
+        //if (Input.GetButton("Fire1") && Time.time > nextFire) 
+        if (Time.time > nextFire) 
 		{
 			nextFire = Time.time + fireRate;
 			Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
